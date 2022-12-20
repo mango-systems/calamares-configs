@@ -129,10 +129,10 @@ strings:
     shortVersionedName:  MangoLinux 2022.2
     bootloaderEntryName: MangoLinux
     productUrl:          https://mandrasaptak.tech/
-    supportUrl:          https://github.com/calamares/calamares/wiki
+    supportUrl:          https://mandrasaptak.tech/
     knownIssuesUrl:      https://github.com/calamares/calamares/issues
     releaseNotesUrl:     https://calamares.io/news/
-    # donateUrl:           https://kde.org/community/donations/index.php
+    donateUrl:           
 
 # These images are loaded from the branding module directory.
 #
