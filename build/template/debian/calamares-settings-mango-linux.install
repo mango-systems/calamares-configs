@@ -1,3 +1,3 @@
-branding/* /etc/calamares/branding/
+branding/ /etc/calamares/
 settings.conf /etc/calamares/
-modules/* /etc/calamares/modules
+modules/ /etc/calamares/

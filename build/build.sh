@@ -1,6 +1,14 @@
 #!/bin/bash
 ## this script is made to make debug easy and easy creation of packages for fast debugging
 
+# Check if the script is being run with sudo
+if [ $(id -u) -ne 0 ]; then
+  # Prompt for the password
+  sudo -p "Enter password to run the script with sudo: " bash $0
+  exit
+fi
+
+
 # DESTDIR=/path/to/destination make
 project_name="calamares-configs-mango-linux"
 explicit_version="" 
@@ -29,7 +37,7 @@ cp -r ../src/branding/* ./$package_name/branding
 cd $package_name
 
 # build the .deb pkg
-sudo chmod +x ./debian/*
+# sudo chmod +x ./debian/*
 
 dpkg-source --before-build .
 dpkg-buildpackage -rfakeroot -D -us -uc -b

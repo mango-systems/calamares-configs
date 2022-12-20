@@ -54,12 +54,17 @@
 
 override_dh_missing:
 	dh_missing
-	mkdir -pv debian/calamares-settings-msm-linux/etc/calamares/modules
-	mkdir -pv debian/calamares-settings-msm-linux/etc/calamares/branding
-	cp -vr modules/* debian/calamares-settings-msm-linux/etc/calamares/modules/
-	cp -vr branding/* debian/calamares-settings-msm-linux/etc/calamares/branding/
-	cp -v settings.conf debian/calamares-settings-msm-linux/etc/calamares/
-	chmod -R 755 debian/calamares-settings-msm-linux/etc/calamares
+	mkdir -pv debian/calamares-settings-mango-linux/etc/calamares/modules
+	mkdir -pv debian/calamares-settings-mango-linux/etc/calamares/branding
+
+	cp -vr modules debian/calamares-settings-mango-linux/etc/calamares/
+	cp -vr branding debian/calamares-settings-mango-linux/etc/calamares/
+
+	cp -v settings.conf debian/calamares-settings-mango-linux/etc/calamares/
+
+	chmod -R 755 debian/calamares-settings-mango-linux/etc/calamares/modules
+	chmod -R 755 debian/calamares-settings-mango-linux/etc/calamares/branding
+
 
 #	mkdir -pv debian/calamares-settings-msm-linux/etc/calamares/modules
 #	cp -vr modules/*.conf debian/calamares-settings-msm-linux/etc/calamares/modules
