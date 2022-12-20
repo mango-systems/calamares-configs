@@ -26,23 +26,41 @@
 #   * D
 #     The build directory, for compatibility with other debhelper build systems.
 
+#%:
+#	dh $@ --buildsystem=cmake
+#
+#override_dh_auto_install:
+#
+##    mkdir -p $(DESTDIR)/etc/calamares
+##    cp settings.conf $(DESTDIR)/etc/calamares/
+##
+##    mkdir -p $(DESTDIR)/etc/calamares/modules
+##	cp -r modules/* $(DESTDIR)/etc/calamares/modules
+##
+##    mkdir -p $(DESTDIR)/etc/calamares/branding
+##	cp -r modules/* $(DESTDIR)/etc/calamares/branding
+#    dh_auto_install
+#
+#override_dh_auto_clean:
+#	rm -rf $(DESTDIR)/etc/calamares
+#	dh_auto_clean
+#
+
+
+# DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 %:
-	dh $@ --buildsystem=cmake
+	dh $@
 
-override_dh_auto_install:
+override_dh_missing:
+	dh_missing
+	mkdir -pv debian/calamares-settings-msm-linux/etc/calamares/modules
+	mkdir -pv debian/calamares-settings-msm-linux/etc/calamares/branding
+	cp -vr modules/* debian/calamares-settings-msm-linux/etc/calamares/modules/
+	cp -vr branding/* debian/calamares-settings-msm-linux/etc/calamares/branding/
+	cp -v settings.conf debian/calamares-settings-msm-linux/etc/calamares/
+	chmod -R 755 debian/calamares-settings-msm-linux/etc/calamares
 
-    mkdir -p $(DESTDIR)/etc/calamares
-    cp settings.conf $(DESTDIR)/etc/calamares/
-
-    mkdir -p $(DESTDIR)/etc/calamares/modules
-	cp -r modules/* $(DESTDIR)/etc/calamares/modules
-
-    mkdir -p $(DESTDIR)/etc/calamares/branding
-	cp -r modules/* $(DESTDIR)/etc/calamares/branding
-    dh_auto_install
-
-override_dh_auto_clean:
-	rm -rf $(DESTDIR)/etc/calamares
-	dh_auto_clean
-
-    
+#	mkdir -pv debian/calamares-settings-msm-linux/etc/calamares/modules
+#	cp -vr modules/*.conf debian/calamares-settings-msm-linux/etc/calamares/modules
+#	chmod -R 755 debian/calamares-settings-msm-linux/usr/lib/

@@ -1,0 +1,3 @@
+branding/* /etc/calamares/branding/
+settings.conf /etc/calamares/
+modules/* /etc/calamares/modules

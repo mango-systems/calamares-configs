@@ -1,11 +1,22 @@
-Source: calamares-settings-msm
+Source: calamares-settings-mango-linux
+Section: devel
 Priority: optional
-Build-Depends: debhelper (>= 9)
-Standards-Version: 3.9.2
-Package: calamares-configs-mango-linux
-Version: 1.0
-Section: utils
-Architecture: all
-Depends: calamares
 Maintainer: MSM <dev.msm74588@gmail.com>
-Description: calamares configs for calamares installer
+Standards-Version: 4.6.0
+
+Package: calamares-settings-mango-linux
+Priority: optional
+Homepage: https://code.launchpad.net/ubuntu-calamares-settings
+Architecture: all
+Depends: calamares (>= 3.2.14~),
+         cryptsetup,
+         keyutils,
+         python3,
+         qml-module-qtquick-window2,
+         qml-module-qtquick2,
+         squashfs-tools,
+         ${misc:Depends}
+Description: Common Calamares Settings
+ This package contains the common Calamares settings for all flavors.
+ There is also a automirror Python script to set sources based on
+ geolocation.
