@@ -5,7 +5,12 @@
 
 /*------------------------ Global Fonts -------------------*/
 *{
-    font: 11px "Rubik Regular";
+    font: 15px "Chilanka";
+}
+
+QLabel{
+    /* color: #FFFFFF; */
+    /* font: 15px; */
 }
 
 /*------------------------ Bottom Buttons -----------------*/
@@ -87,9 +92,16 @@
 
 /*-- Welcome to installer text --*/
 QLabel#mainText {
-	color: #5294E2;
+	color: #c3a2ff;
     font: bold 12px;
 }
+QLabel#resultsExplanation{
+    color: #cfcfcf;
+}
+
+/* #storage{
+    background: #5294E2;
+} */
 
 /*-- Language Box --*/
 QComboBox {
@@ -100,11 +112,11 @@ QComboBox {
 }
 
 QComboBox:!editable, QComboBox::drop-down:editable {
-     background: #3E4350;
+     background: #5e70b1;
 }
 /* QComboBox gets the "on" state when the popup is open */
 QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-    background: #263E4350;
+    background: #263E43;
 }
 
 QComboBox::drop-down {
@@ -122,14 +134,25 @@ QComboBox::down-arrow {
     image: url(/etc/calamares/branding/archcraft/icons/go-down.svg);
 }
 
+#donateButton, #supportButton, #knownIssuesButton, #releaseNotesButton{
+    color: #FFFFFF;
+}
+
+#aboutButton, #debugButton{
+    color: #5294E2;
+}
+
 /*------------------------ Main App ------------------------*/
 
 #mainApp { 
-/*	background-color: #29353B;	*/
+	background-color: #231f20;
 }
 
 #sidebarApp {
+    background-color: #231f20;
 }
+
+
 
 #logoApp {
 	padding: 0px;
