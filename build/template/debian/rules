@@ -1,0 +1,48 @@
+#!/usr/bin/make -f
+
+# This is the debhelper build system for Calamares.
+
+# The following variables can be set in the environment or on the command line:
+
+#   * NO_TESTS
+#     Do not build or run tests.
+
+#   * BUILD_TYPE
+#     Set to "debug" to build with debugging symbols, or "release" to build
+#     optimized.
+
+#   * BUILD_OPTIONS
+#     Additional options to pass to CMake when building.
+
+#   * TEST_OPTIONS
+#     Additional options to pass to CTest when running tests.
+
+#   * BUILDDIR
+#     The build directory.
+
+#   * DESTDIR
+#     The installation prefix.
+
+#   * D
+#     The build directory, for compatibility with other debhelper build systems.
+
+%:
+	dh $@ --buildsystem=cmake
+
+override_dh_auto_install:
+
+    mkdir -p $(DESTDIR)/etc/calamares
+    cp settings.conf $(DESTDIR)/etc/calamares/
+
+    mkdir -p $(DESTDIR)/etc/calamares/modules
+	cp -r modules/* $(DESTDIR)/etc/calamares/modules
+
+    mkdir -p $(DESTDIR)/etc/calamares/branding
+	cp -r modules/* $(DESTDIR)/etc/calamares/branding
+    dh_auto_install
+
+override_dh_auto_clean:
+	rm -rf $(DESTDIR)/etc/calamares
+	dh_auto_clean
+
+    

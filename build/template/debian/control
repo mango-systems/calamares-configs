@@ -1,0 +1,11 @@
+Source: calamares-settings-msm
+Priority: optional
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.2
+Package: calamares-configs-mango-linux
+Version: 1.0
+Section: utils
+Architecture: all
+Depends: calamares
+Maintainer: MSM <dev.msm74588@gmail.com>
+Description: calamares configs for calamares installer
