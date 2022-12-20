@@ -13,6 +13,7 @@ chmod +x ./build/build.sh
 - to test calamares config run ```calamares -d``` in the ```root``` of the folder
 - customise *.desc(branding) files and *.conf files
 - update changelog (using a script)/ currently edit template
+- https://github.com/lubuntu-team/calamares-settings-ubuntu/tree/ubuntu/kinetic/debian
 ### Location of files to be placed
     settings.conf => /etc/calamares/settings.conf
     src/modules/* => /etc/calamares/modules/*
