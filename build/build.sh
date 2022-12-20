@@ -2,11 +2,11 @@
 ## this script is made to make debug easy and easy creation of packages for fast debugging
 
 # Check if the script is being run with sudo
-if [ $(id -u) -ne 0 ]; then
-  # Prompt for the password
-  sudo -p "Enter password to run the script with sudo: " bash $0
-  exit
-fi
+# if [ $(id -u) -ne 0 ]; then
+#   # Prompt for the password
+#   sudo -p "Enter password to run the script with sudo: " bash $0
+#   exit
+# fi
 
 
 # DESTDIR=/path/to/destination make
@@ -42,3 +42,6 @@ cd $package_name
 dpkg-source --before-build .
 dpkg-buildpackage -rfakeroot -D -us -uc -b
 
+# chown $USER:$USER ../$package_name*.deb
+# chown $USER:$USER ../$package_name*.buildinfo
+# chown $USER:$USER ../$package_name*.changes
