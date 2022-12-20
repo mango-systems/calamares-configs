@@ -20,6 +20,7 @@
          QPushButton "aboutButton" 
          QPushButton "debugButton" 
        QWidget "" 
+       QWidget "" 
          QPushButton "view-button-back" 
          QPushButton "view-button-next" 
          QPushButton "view-button-cancel" 
