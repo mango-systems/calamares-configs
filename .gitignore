@@ -1,2 +1,3 @@
 build/*
 !build/template/
+!build/build.sh
