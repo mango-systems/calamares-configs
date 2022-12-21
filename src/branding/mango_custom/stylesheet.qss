@@ -88,6 +88,19 @@ QLabel{
     border-width: 0px;
 }
 
+/* ----Welcome Page Warning labels---- */
+#storage > QLabel,
+#partitions > QLabel,
+#root > QLabel,
+#internet > QLabel{
+    color: #FFFFFF;
+    text-decoration: underline solid;
+}
+
+ResultWidget{
+    background-color: #000;
+}
+
 /*------------------------ Welcome Page Text ------------------------*/
 
 /*-- Welcome to installer text --*/
@@ -109,11 +122,16 @@ QComboBox {
     border-radius: 2px;
     padding: 6px;
     min-width: 20em;
+    
 }
 
+
 QComboBox:!editable, QComboBox::drop-down:editable {
-     background: #5e70b1;
+    background-color: #2c2728;
+    color: #FFFFFF
 }
+
+
 /* QComboBox gets the "on" state when the popup is open */
 QComboBox:!editable:on, QComboBox::drop-down:editable:on {
     background: #263E43;
@@ -139,7 +157,7 @@ QComboBox::down-arrow {
 }
 
 #aboutButton, #debugButton{
-    color: #5294E2;
+    color: #96bbe7;
 }
 
 /*------------------------ Main App ------------------------*/
