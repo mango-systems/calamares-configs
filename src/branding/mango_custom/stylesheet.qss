@@ -5,7 +5,8 @@
 
 /*------------------------ Global Fonts -------------------*/
 *{
-    font: 15px "Chilanka";
+    /* font: 15px "Chilanka"; */
+    font: 15px "Rubik";
 }
 
 QLabel{
@@ -24,12 +25,15 @@ QLabel{
 #view-button-back,
 #view-button-next,
 #view-button-cancel {
-    background-color: #444A58;
-    border: 1px solid #1E2128;
-    border-radius: 2px;
+    background-color: #242424;
+    border: 2px solid #ffcb2e;
+    border-radius: 7px;
     font: bold 12px;
     min-width: 4em;
     padding: 8px;
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #view-button-back:hover,
@@ -105,8 +109,9 @@ ResultWidget{
 
 /*-- Welcome to installer text --*/
 QLabel#mainText {
-	color: #c3a2ff;
+	color: #ffcb2e;
     font: bold 12px;
+
 }
 QLabel#resultsExplanation{
     color: #cfcfcf;
@@ -157,17 +162,18 @@ QComboBox::down-arrow {
 }
 
 #aboutButton, #debugButton{
-    color: #96bbe7;
+    color: #FFFFFF;
+    background-color: #f27126;
 }
 
 /*------------------------ Main App ------------------------*/
 
 #mainApp { 
-	background-color: #231f20;
+	background-color: #222222;
 }
 
 #sidebarApp {
-    background-color: #231f20;
+    background-color: #f29018;
 }
 
 
