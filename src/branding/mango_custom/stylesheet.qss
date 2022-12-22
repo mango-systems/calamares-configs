@@ -40,34 +40,34 @@ QLabel{
 #view-button-next:hover,
 #view-button-cancel:hover {
 	color: #FFFFFF;
-    background-color: #505666;
+    background-color: #313131;
     border-style: solid;
 }
 
 /*------------------------ Welcome Page Buttons ------------------------*/
 
 #aboutButton { 
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/about.svg);
+	qproperty-icon: url(/etc/calamares/branding/mango_custom/icons/about.svg);
 }
 
 #debugButton { 
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/about.svg);
+	qproperty-icon: url(/etc/calamares/branding/mango_custom/icons/about.svg);
 }
 
 #donateButton { 
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/donate.svg);
+	qproperty-icon: url(/etc/calamares/branding/mango_custom/icons/donate.svg);
 }
 
 #supportButton {
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/fourm.svg);
+	qproperty-icon: url(/etc/calamares/branding/mango_custom/icons/forum.svg);
 }
 
 #releaseNotesButton {
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/notes.svg);
+	qproperty-icon: url(/etc/calamares/branding/mango_custom/icons/notes.svg);
 }
 
 #knownIssuesButton {
-	qproperty-icon: url(/etc/calamares/branding/archcraft/icons/issues.svg);
+	qproperty-icon: url(/etc/calamares/branding/mango_custom/icons/issues.svg);
 }
 
 #debugButton,
@@ -85,9 +85,10 @@ QLabel{
 #supportButton:hover,
 #releaseNotesButton:hover,
 #knownIssuesButton:hover {
-	color: #5294E2;
+	color: #e3b62c;
     border-style: solid;
     border-width: 0px;
+    font-weight: bold;
 }
 
 /* ----Welcome Page Warning labels---- */
@@ -152,7 +153,7 @@ QComboBox::drop-down {
     border-bottom-right-radius: 3px;
 }
 QComboBox::down-arrow {
-    image: url(/etc/calamares/branding/archcraft/icons/go-down.svg);
+    image: url(/etc/calamares/branding/mango_custom/icons/go-down.svg);
 }
 
 #donateButton, #supportButton, #knownIssuesButton, #releaseNotesButton{
