@@ -163,7 +163,8 @@ strings:
 #
 # These filenames can also use substitutions from os-release (see above).
 images:
-    productBanner:       "mango-banner(1).png"
+    # productBanner:       "mango-banner(1).png"
+    productBanner:       "mango-banner-modern.png"
     productIcon:         "mango-linux.png"
     productLogo:         "mango-linux.png"
     # productWallpaper:    "wallpaper.png"
