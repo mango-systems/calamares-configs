@@ -30,7 +30,7 @@ cp -r template $package_name
 
 mkdir $package_name/modules $package_name/branding
 
-cp ../settings.conf ./$package_name/
+cp ../src/settings.conf ./$package_name/
 cp -r ../src/modules/* ./$package_name/modules
 cp -r ../src/branding/* ./$package_name/branding
 
