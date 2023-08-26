@@ -9,6 +9,10 @@ chmod +x ./build/build.sh
 ./build.sh
 ```
 
+### Test
+`calamares --config ./src`
+- run in the root of the directory
+
 ### Note
 - to test calamares config run ```calamares -d``` in the ```root``` of the folder
 - customise *.desc(branding) files and *.conf files
