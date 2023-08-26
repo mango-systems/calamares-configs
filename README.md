@@ -28,3 +28,18 @@ chmod +x ./build/build.sh
 
 ### Bookmarks
     https://youtu.be/L91iAquEopc
+
+```bash
+# create dir for this work
+rm -rf calamares
+mkdir -p calamares
+cd calamares
+# download sources from github
+wget https://github.com/calamares/calamares/releases/download/v3.2.49.1/calamares-3.2.49.1.tar.gz
+# untar it
+tar xvpf calamares-3.2.49.1.tar.gz
+cd calamares-3.2.49.1
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DWITH_PYTHONQT=ON -DAppStreamQt_DIR=... .. 
+```
